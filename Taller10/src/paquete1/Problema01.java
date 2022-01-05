@@ -16,6 +16,28 @@ public class Problema01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int fila;
+        int columna;
+        double sumanotas;
+        double promedio;
+        double[][] notas = {{9, 10, 7, 8}, {10, 5, 7, 9}, {7, 9.4, 10, 9}};
+        int divisor = 4;
+        String[] Estudiantes = {"Jerry ponce", "Gabriela Lewis",
+            "David Bell"};
+
+        for (fila = 0; fila < Estudiantes.length; fila++) {
+            sumanotas = 0;
+            for (columna = 0; columna <= notas.length; columna++) {
+                sumanotas = sumanotas + notas[fila][columna];
+
+            }
+            promedio = sumanotas / divisor;
+
+            System.out.printf("Estudiante: %s tiene un promedio de %.2f\n",
+                    Estudiantes[fila],
+                    promedio);
+        }
+
     }
-    
+
 }
